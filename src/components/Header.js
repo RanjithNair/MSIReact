@@ -12,7 +12,7 @@ export default class Header extends Component {
     }
 
     executeSearch(searchText) {
-        this.props.actions.fetchData('http://msiapi.herokuapp.com/msiapi/songs/ms/' + this.props.state.searchText + '/1', ActionTypes.RECEIVE_SEARCH_RESULT_DATA);
+        this.props.actions.fetchData('https://msiapi.herokuapp.com/msiapi/songs/ms/' + this.props.state.searchText + '/1', ActionTypes.RECEIVE_SEARCH_RESULT_DATA);
         //this.props.actions.fetchData('http://localhost:3004/msiapi', ActionTypes.RECEIVE_SEARCH_RESULT_DATA);
     }
 
