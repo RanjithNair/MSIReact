@@ -1,0 +1,89 @@
+@import url(https://fonts.googleapis.com/css?family=Raleway:100,400);
+
+$main-bg-color: #f1f2f0;
+$accent-blue: #37bbe4;
+$accent-gray: #e1e0dd;
+$accent-black: #35342f;
+$accent-orange: #ec6b2d;
+$accent-red: #dd6464;
+
+body {
+  background-color: $main-bg-color;
+  color: $accent-black;
+  font-family: 'Raleway', sans-serif;
+}
+
+#searchButton {
+  margin-left: 10px;
+}
+
+li#msi-audio-player {
+  padding-top: 10px;
+}
+
+table.msi-data {
+  tr {
+    cursor: pointer;
+  }
+}
+
+@media (min-width: 768px) {
+  div.searchSection {
+    display: block;
+    text-align: center;
+  }
+  #searchText {
+    min-width: 400px;
+  }
+}
+
+
+@media (max-width: 800px) {
+
+    /* Force table to not be like tables anymore */
+	#no-more-tables table,
+	#no-more-tables thead,
+	#no-more-tables tbody,
+	#no-more-tables th,
+	#no-more-tables td,
+	#no-more-tables tr {
+		display: block;
+	}
+
+	/* Hide table headers (but not display: none;, for accessibility) */
+	#no-more-tables thead tr {
+		position: absolute;
+		top: -9999px;
+		left: -9999px;
+	}
+
+	#no-more-tables tr { border: 1px solid #ccc; }
+
+	#no-more-tables td {
+		/* Behave  like a "row" */
+		border: none;
+		border-bottom: 1px solid #eee;
+		position: relative;
+		padding-left: 50%;
+		white-space: normal;
+		text-align:left;
+	}
+
+	#no-more-tables td:before {
+		/* Now like a table header */
+		position: absolute;
+		/* Top/left values mimic padding */
+		top: 6px;
+		left: 6px;
+		width: 45%;
+		padding-right: 10px;
+		white-space: nowrap;
+		text-align:left;
+		font-weight: bold;
+	}
+
+	/*
+	Label the data
+	*/
+	#no-more-tables td:before { content: attr(data-title); }
+}
