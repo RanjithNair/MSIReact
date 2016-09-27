@@ -5,7 +5,7 @@
  */
 
 let loadedModule = null;
-
+console.log(process.env.NODE_ENV);
 if (process.env.NODE_ENV === 'production') {
   loadedModule = require('./Root.prod.js');
 } else {
