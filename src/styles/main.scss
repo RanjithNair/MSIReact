@@ -11,6 +11,7 @@ body {
   background-color: $main-bg-color;
   color: $accent-black;
   font-family: 'Raleway', sans-serif;
+  padding-top: 70px;
 }
 
 #searchButton {
@@ -86,4 +87,7 @@ table.msi-data {
 	Label the data
 	*/
 	#no-more-tables td:before { content: attr(data-title); }
+  svg.icon-loading {
+    margin-top: 170px;
+  }
 }

@@ -74,3 +74,12 @@ export function selectedSong(song) {
         }
     };
 }
+
+export function isSubmitButtonClicked(isClicked) {
+  return {
+    type: ActionTypes.SUBMIT_CLICKED,
+    payload: {
+      isClicked: isClicked
+    }
+  };
+}

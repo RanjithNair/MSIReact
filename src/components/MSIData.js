@@ -34,7 +34,7 @@ export default class MSIData extends Component {
                     <td data-title="Singers">{song.S_SINGERS}</td>
                     <td data-title="Musicians">{song.S_MUSICIAN}</td>
                     <td data-title="Lyricist">{song.Lyricist}</td>
-                    <td data-title="Raaga">{song.S_RAGA}</td>
+                    <td data-title="Raaga">{song.S_RAGA == '' || song.S_RAGA == null ? 'NA' : song.S_RAGA}</td>
                 </tr>
             );
         }); // no need to bind with anon function

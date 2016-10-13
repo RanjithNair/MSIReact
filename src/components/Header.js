@@ -13,12 +13,13 @@ export default class Header extends Component {
 
     executeSearch(searchText) {
         this.props.actions.fetchData('https://msiapi.herokuapp.com/msiapi/songs/ms/' + this.props.state.searchText + '/1', ActionTypes.RECEIVE_SEARCH_RESULT_DATA);
+        this.props.actions.isSubmitButtonClicked(true);
         //this.props.actions.fetchData('http://localhost:3004/msiapi', ActionTypes.RECEIVE_SEARCH_RESULT_DATA);
     }
 
     render() {
         return (
-            <nav className="navbar navbar-default">
+            <nav className="navbar navbar-default navbar-fixed-top">
                 <div className="container-fluid">
 
                     <button type="button" className="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
