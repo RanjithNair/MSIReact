@@ -41,6 +41,14 @@ table.msi-data {
 
 @media (max-width: 800px) {
 
+  div.msi-data {
+    padding-top: 125px;
+  }
+
+  ul.navbar-nav {
+    padding-left: 15px;
+  }
+
     /* Force table to not be like tables anymore */
 	#no-more-tables table,
 	#no-more-tables thead,

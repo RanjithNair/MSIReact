@@ -11,7 +11,7 @@ export default class MSIRoot extends Component {
     render() {
       {if(this.props.state.isSubmitClicked) {
         return(
-          <div>
+          <div className="msi-data">
 
             {this.props.state.searchResult != null ?
               <MSIData
