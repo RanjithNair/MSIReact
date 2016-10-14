@@ -40,6 +40,11 @@ export default class MSIData extends Component {
         }); // no need to bind with anon function
     }
     render() {
+      if(this.props.state.searchResult.errorcode == 100) {
+        return (
+          <div className="alert alert-danger" role="alert">No songs found !!</div>
+        )
+      }
         return (
             <div id="no-more-tables">
                 <table className="table table-hover table-bordered table-striped msi-data">
