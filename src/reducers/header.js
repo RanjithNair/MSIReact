@@ -19,6 +19,8 @@ export default function counter(state = initialState, action) {
       return state.set('searchResult', action.payload);
     case ActionTypes.RECEIVE_SONG_MP3_LINK:
       return state.set('songAudioLink', action.payload.url);
+    case ActionTypes.RECEIVE_YOUTUBE_DATA:
+      return state.set('youtubeLink', action.payload.youTubeUrl);
     case ActionTypes.SELECTED_SONG:
       return state.set('selectedSong', action.payload.selectedSong);
     case ActionTypes.SUBMIT_CLICKED:

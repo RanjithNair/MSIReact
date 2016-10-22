@@ -12,6 +12,7 @@ const ActionTypes = keyMirror({
   RECEIVE_ERROR: null,
   RECEIVE_SEARCH_RESULT_DATA: null,
   RECEIVE_SONG_MP3_LINK : null,
+  RECEIVE_YOUTUBE_DATA: null,
   SELECTED_SONG: null,
   SUBMIT_CLICKED: null
 });

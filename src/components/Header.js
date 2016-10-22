@@ -1,6 +1,8 @@
 import React, {Component, PropTypes} from 'react';
 import ActionTypes from '../constants/ActionTypes';
 import AudioPlayer from './AudioPlayer';
+import ReactPlayer from 'react-player';
+
 
 export default class Header extends Component {
     constructor(props, context) {
@@ -36,6 +38,9 @@ export default class Header extends Component {
                         <ul className="nav navbar-nav">
                             <li id="msi-audio-player">
                               <AudioPlayer audioLink={this.props.state.songAudioLink} />
+                            </li>
+                            <li>
+                              <ReactPlayer url={this.props.state.youtubeLink} playing width={200} height={50} controls />
                             </li>
                         </ul>
                         <div className = "searchSection">
