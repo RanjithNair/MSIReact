@@ -1,6 +1,6 @@
 {
   "name": "generator-simple-redux",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "My simple redux application.",
   "scripts": {
     "clean": "rimraf dist",
