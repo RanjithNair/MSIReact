@@ -15,7 +15,8 @@ export default class MSIData extends Component {
     fetchDetails(song) {
         if (song.LYRICS_URL != null) {
             const songID = song.LYRICS_URL.split("/")[5].split(".")[0];
-            this.props.actions.fetchData('https://msiapi.herokuapp.com/msiapi/audio/' + songID, ActionTypes.RECEIVE_SONG_MP3_LINK);
+            //this.props.actions.fetchData('https://msiapi.herokuapp.com/msiapi/audio/' + songID, ActionTypes.RECEIVE_SONG_MP3_LINK);
+            this.props.actions.setSelectedSongMp3Link(song.SONG_URL.replace('html', 'mp3'));
             this.props.actions.fetchData('https://msiapi.herokuapp.com/msiapi/youtube/' + song.S_SONG + " " + song.S_MOVIE, ActionTypes.RECEIVE_YOUTUBE_DATA);
         }
         this.props.actions.selectedSong(song);

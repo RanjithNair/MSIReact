@@ -66,6 +66,15 @@ export function changeSearchText(searchText) {
     };
 }
 
+export function setSelectedSongMp3Link(mp3Link) {
+  return {
+      type: ActionTypes.RECEIVE_SONG_MP3_LINK,
+      payload: {
+          url: mp3Link
+      }
+  };
+}
+
 export function selectedSong(song) {
     return {
         type: ActionTypes.SELECTED_SONG,
